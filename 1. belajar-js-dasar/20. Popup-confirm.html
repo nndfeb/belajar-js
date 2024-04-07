@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Popup confirm</title>
+  </head>
+  <body>
+    <script>
+      const masuk = confirm("Yakin ingin masuk?");
+      if (masuk) {
+        const name = prompt("Masukan nama anda !");
+        alert(`Hello ${name} salam kenal!`);
+      } else {
+        alert(`Bye bye!`);
+      }
+    </script>
+  </body>
+</html>
