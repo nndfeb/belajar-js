@@ -1,26 +1,18 @@
 /**
- * ? Undifined
- * Adalah sebuah type data yang belum ditambahkan nilai
- * undifined berbeda dangan null
+ * ? Null
+ * Merupakan representasi data kosong
+ * null berbeda dangan undefined, null berarti variable yang sudah ditambahkan valuenya, hanya aja valuenya null
+ * sedangkan undefined adalah variable belum ditambahkan valuenya
  */
 
-// Contoh :
+let firstName = null;
 
-let contoh;
-if (contoh == undefined) {
-  console.log("UNDIFINED");
+if (firstName == null) {
+  console.log("is null");
+} else if (firstName == undefined) {
+  console.log("is undifiend");
 } else {
-  console.log("DEFINED");
+  console.log("bukan kedaunya");
 }
-// Output : UNDIFINED
 
-// Contoh ke-2
-let contoh2 = ["Jogja", "Jakarta"];
-// index ke-2 itu tidak ada
-if (contoh2[2] === undefined) {
-  console.log("Kosong tidak ada!");
-} else {
-  console.log(`Hello ${contoh2[2]}`);
-}
-// Output : Kosong tidak ada!
-
+// Output : is null
