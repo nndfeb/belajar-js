@@ -1,0 +1,38 @@
+<!-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this -->
+<!-- 
+/**
+ * ? Kata kunci this
+ * Kata this adalah referensi ke object milik siapa
+ * dalam Object method ths merupakan referensi ke object pemlik functionnya
+ */ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>this</title>
+  </head>
+  <body>
+    <script>
+      console.info(this);
+
+      function sample() {
+        console.log(this);
+        function inner() {
+          console.log(this);
+        }
+        inner();
+      }
+      sample(); // Output Window
+
+      const person = {
+        name: "Eko",
+        sayHello: function (value) {
+          console.log(`Hallo ${value}, my name is ${this.name}`);
+        },
+      };
+      person.sayHello("Budi"); //  Hallo Budi, my name is Eko
+    </script>
+  </body>
+</html>
