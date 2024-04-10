@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prototype Inheritance</title>
+  </head>
+  <body>
+    <script>
+      /**
+       * JS sebelumnya dikenal dgn progaman berbasis prototype
+       * @ Prototype Inheritance
+       *
+       */
+
+      function Person(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.sayHello = function (name) {
+          console.log(`Hello ${name}, my name is ${this.firstName}`);
+        };
+      }
+
+      Person.prototype.sayBye = function () {
+        console.log(`Good bye!`);
+      };
+
+      Person.prototype.run = function () {
+        console.log(`Hello ${this.firstName} is runnig!`);
+      };
+
+      const eko = new Person("EKo", "Kurawan");
+      eko.sayBye();
+      eko.run();
+      console.log(eko);
+
+      const budi = new Person("Budi", "Doremi");
+      console.log(budi);
+    </script>
+  </body>
+</html>
