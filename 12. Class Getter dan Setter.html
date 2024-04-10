@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class Getter dan Setter</title>
+  </head>
+  <body>
+    <script>
+      class Person {
+        constructor(firstName, lastName) {
+          this.firstName = firstName;
+          this.lastName = lastName;
+        }
+
+        // Getter
+        get fullName() {
+          return `${this.firstName} - ${this.lastName}`;
+        }
+
+        // Setter
+        set fullName(value) {
+          const result = value.split(" ");
+          this.firstName = result[0];
+          this.lastName = result[1];
+        }
+      }
+
+      const eko = new Person("Eko", "Khenedy");
+      console.log(eko);
+      console.log(eko.fullName);
+
+      eko.fullName = "Budi Doremi";
+      console.log(eko);
+    </script>
+  </body>
+</html>
