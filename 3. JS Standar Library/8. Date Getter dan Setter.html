@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Getter dan Setter</title>
+  </head>
+  <body>
+    <script>
+      /**
+       * ? Date Getter dan Setter
+       * Date juga memiliki banyak sekali method unutk mendapatkan informasi date dan juga mengubah informasi date atau istilahnya adalah getter dan setter
+       * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#instance_methods
+       * */
+
+      const myDate = new Date();
+      // myDate.setFullYear(2023);
+      console.log(myDate.getFullYear()); // Output : 2024
+      console.log(myDate.getUTCFullYear()); // Output : 2024
+      console.log(myDate.getMonth()); // Output : 3
+      console.log(myDate.getDate()); // Output : 11
+      console.log(myDate.getHours());
+      console.log(myDate.getMinutes());
+      console.log(myDate.getSeconds());
+      console.log(myDate.getMilliseconds());
+      console.log(myDate.getTimezoneOffset());
+    </script>
+  </body>
+</html>

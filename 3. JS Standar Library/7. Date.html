@@ -7,29 +7,48 @@
   </head>
   <body>
     <script>
-      /**
-       * Date
-       * Js memiliki tipe data nutk merepresentasikan waktu dan tangal yaitu Date
-       * Date merupakan representasi milisecod sejak tgl 1 januari 1970 atau dikenal dengan Epoch & Unik Timestamp
-       * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
-       * Untuk membaut obejct Date kita bisa menggunakan new Date() dimna terdapat constructor parameter
-       **   Obejct                                                           |       Desc
-       *    new Date()                                                       |       Membuat date saat ini
-       *    new Date(year, month, date)                                      |       Membuat date dengan tanggal
-       *    new Date(year, month, date?, hour?, minute?, second?, milis?)    |       Membuat date dengan parameter sampai milis
-       *    new Date(timestamp)                                              |       Membuat date dari epoch atau unix timestamp
-       *
-       *?  https://currentmillis.com/
-       */
+      {
+        /**
+         * Date
+         * Js memiliki tipe data nutk merepresentasikan waktu dan tangal yaitu Date
+         * Date merupakan representasi milisecod sejak tgl 1 januari 1970 atau dikenal dengan Epoch & Unik Timestamp
+         * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+         * Untuk membaut obejct Date kita bisa menggunakan new Date() dimna terdapat constructor parameter
+         **   Obejct                                                           |       Desc
+         *    new Date()                                                       |       Membuat date saat ini
+         *    new Date(year, month, date)                                      |       Membuat date dengan tanggal
+         *    new Date(year, month, date?, hour?, minute?, second?, milis?)    |       Membuat date dengan parameter sampai milis
+         *    new Date(timestamp)                                              |       Membuat date dari epoch atau unix timestamp
+         *
+         *?  https://currentmillis.com/
+         */
 
-      const date1 = new Date();
-      console.log(date1); // Output : Thu Apr 11 2024 16:04:22 GMT+0700 (Western Indonesia Time)
+        const date1 = new Date();
+        console.log(date1); // Output : Thu Apr 11 2024 16:04:22 GMT+0700 (Western Indonesia Time)
 
-      const date2 = new Date(2020, 10, 10);
-      console.log(date2); // Output : Tue Nov 10 2020 00:00:00 GMT+0700 (Western Indonesia Time)
+        const date2 = new Date(2020, 10, 10);
+        console.log(date2.getTime()); // Output epoch Number : 1604941200000
 
-      const date3 = new Date(2020, 10, 10, 16, 15, 9, 123);
-      console.log(date3); // Output : Tue Nov 10 2020 16:15:09 GMT+0700 (Western Indonesia Time)
+        const date3 = new Date(2020, 10, 10, 16, 15, 9, 123);
+        console.log(date3); // Output : Tue Nov 10 2020 16:15:09 GMT+0700 (Western Indonesia Time)
+
+        const date4 = new Date(1712826514015); // Output : get data in https://currentmillis.com/
+        console.log(date4); // Output : Thu Apr 11 2024 16:08:34 GMT+0700 (Western Indonesia Time)
+
+        const timestamp = Date.now();
+        console.log(timestamp); // Output : 1712826833777
+        const codeUnix = new Date(timestamp);
+        console.log(codeUnix); // Output : Thu Apr 11 2024 16:14:03 GMT+0700 (Western Indonesia Time)
+        console.log(codeUnix.getTime()); // Output : 1712826820736
+      }
+      {
+        // Date Parsing
+        const parseTimestamp = Date.parse("2020-10-10T08:45:45.123+07:00");
+        console.log(parseTimestamp); // Output : 1602294345123
+
+        const parseDate = new Date(parseTimestamp);
+        console.log(`ini : ${parseDate}`); // Output : ini : Sat Oct 10 2020 08:45:45 GMT+0700 (Western Indonesia Time)
+      }
     </script>
   </body>
 </html>
