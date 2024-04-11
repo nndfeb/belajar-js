@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date Library</title>
+  </head>
+  <body>
+    <script>
+      /**
+       * Date
+       * Js memiliki tipe data nutk merepresentasikan waktu dan tangal yaitu Date
+       * Date merupakan representasi milisecod sejak tgl 1 januari 1970 atau dikenal dengan Epoch & Unik Timestamp
+       * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+       * Untuk membaut obejct Date kita bisa menggunakan new Date() dimna terdapat constructor parameter
+       **   Obejct                                                           |       Desc
+       *    new Date()                                                       |       Membuat date saat ini
+       *    new Date(year, month, date)                                      |       Membuat date dengan tanggal
+       *    new Date(year, month, date?, hour?, minute?, second?, milis?)    |       Membuat date dengan parameter sampai milis
+       *    new Date(timestamp)                                              |       Membuat date dari epoch atau unix timestamp
+       *
+       *?  https://currentmillis.com/
+       */
+
+      const date1 = new Date();
+      console.log(date1); // Output : Thu Apr 11 2024 16:04:22 GMT+0700 (Western Indonesia Time)
+
+      const date2 = new Date(2020, 10, 10);
+      console.log(date2); // Output : Tue Nov 10 2020 00:00:00 GMT+0700 (Western Indonesia Time)
+
+      const date3 = new Date(2020, 10, 10, 16, 15, 9, 123);
+      console.log(date3); // Output : Tue Nov 10 2020 16:15:09 GMT+0700 (Western Indonesia Time)
+    </script>
+  </body>
+</html>

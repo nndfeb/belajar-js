@@ -12,5 +12,18 @@
    *    new Date(timestamp)                                              |       Membuat date dari epoch atau unix timestamp
    */
 
-  console.log(new Date());
+  const date1 = new Date();
+  console.log(date1);
+
+  const date2 = new Date(2024, 8, 11);
+  console.log(date2);
+
+  const date3 = new Date(1712813982843);
+  console.log(date3);
+
+  //   Example
+  const timestamp = Date.now();
+  console.log(timestamp);
+  const dateUnix = new Date(timestamp);
+  console.log(dateUnix.getTime());
 }
