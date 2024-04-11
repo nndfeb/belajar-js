@@ -71,3 +71,14 @@ console.log(regex.test("Babi")); // Output : false
  ** Quantifies : Menentukan jumlah huruf atau angka
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers
  */
+
+{
+  // Advenced Regex
+
+  const regex = /ek[aiueo]/gi;
+  const names = "eka eki EKo eko euk edo eco echo";
+  let result;
+  while ((result = regex.exec(names)) !== null) {
+    console.log(result);
+  }
+}
