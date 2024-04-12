@@ -82,3 +82,25 @@ console.log(regex.test("Babi")); // Output : false
     console.log(result);
   }
 }
+
+{
+  /**
+   ** Reguler Expression di Stirng
+   * Di JS tipe data stirng memiliki instance method yang dapat memanfaatkan RegExp unutk melakukan pencarian
+   */
+  /**
+   ** String Method                  Keterangan
+   * match(regex):Array             Mencari semnua data yang sesaui dengan regex
+   * search(regex) : index          Mencari index data yang sesuai dengan Regex
+   * replace(regex, value)          Mengubah data dengan value seusai regex
+   * replaceAll(regex, value)       Mengubah semua data dengan value seusai regex
+   * split(regex):Array             Memotong string dengan regex
+   */
+
+  const names = "edo eka eki EKo eko euk edo eco echo";
+  const text = "#tiktok #instagram merupakan app medsos";
+  console.log(names.match(/ek[aiueo]/gi)); // Output : [ 'eka', 'eki', 'EKo', 'eko' ]
+  console.log(names.search(/ek[aiueo]/gi)); // Output : 4
+  console.log(text.replace(/#./gi, "<a href='#' >url</a>"));
+  console.log(names.split(/e/gi));
+}
